@@ -22,7 +22,7 @@ exports.createCSV = async (req, res) => {
         const isCorrectCSVData = dataValidator(data);
 
         if (!isCorrectCSVData) {
-           throw { name : 'NotCorrectCSVData', message : 'Some columns were missing from the CSV, are you sure you uploaded the correct one?' }; 
+           throw new Error('Some columns were missing from the CSV, are you sure you uploaded the correct one?');
         }
 
         const formattedData = dataFormatter(data);
