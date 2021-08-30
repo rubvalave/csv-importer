@@ -1,0 +1,36 @@
+version: '3'
+volumes:
+    node_modules:
+      driver: local
+      driver_opts:
+        type: none
+        o: bind
+        device: ./node_modules
+services:
+  posting-app:
+    container_name: posting-app
+    restart: always
+    build: ./posting-app
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./posting-app/:/posting-app/
+      - node_modules:/posting-app/node_modules
+    links:
+      - mongo
+  getting-app:
+    container_name: getting-app
+    restart: always
+    build: ./getting-app
+    ports:
+      - "8100:8100"
+    volumes:
+      - ./getting-app/:/getting-app/
+      - node_modules:/getting-app/node_modules
+    links:
+      - mongo
+  mongo:
+    container_name: mongo
+    image: mongo
+    ports:
+      - "27017:27017"
