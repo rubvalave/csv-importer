@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const sectorPerCountrySchema = new Schema(
+const emmissionsInfoSchema = new Schema(
   {
     1850: Number,
     1851: Number,
@@ -180,5 +180,5 @@ const sectorPerCountrySchema = new Schema(
   }
 );
 
-const SectorPerCountry = mongoose.model("SectorPerCountry", sectorPerCountrySchema);
-module.exports = SectorPerCountry;
+const EmmissionsInfo = mongoose.model("EmmissionsInfo", emmissionsInfoSchema);
+module.exports = EmmissionsInfo;
