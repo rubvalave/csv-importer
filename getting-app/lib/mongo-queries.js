@@ -12,7 +12,7 @@ const createDBQuery = ({
     sector = '',
     parentSector = '',
     yearAmount,
-    orderBy = { field: 'updatedAt', method: -1 },
+    orderBy,
 }) => {
     const matchObject = {
         $match: {},
@@ -24,9 +24,9 @@ const createDBQuery = ({
 
     if (searchTerm) {
         matchObject.$match.$or = [
-            countryMatch(searchTerm),
-            sectorMatch(searchTerm),
-            parentSectorMatch(searchTerm),
+            { country: stringMatch(searchTerm)},
+            { sector: stringMatch(searchTerm)},
+            { parentSector: stringMatch(searchTerm)},
         ];
     }
 
