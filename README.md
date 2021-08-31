@@ -33,7 +33,7 @@ And experiment with filters! You can see everything that can be used in the Post
 1. country: Country in the files provided are composed of three letters as a definition for every country. In this query it uses free text search only for this field, so anything you include should try to find matches among this three letters field.
 2. sector: Same as country with the difference of having longer strings.
 3. parentSector: Same as sector.
-4. orderBy: Sorting for dummies! Just add the field you want to order followed by a dot and the method for sorting ('asc' and 'desc') and voilà! Example: country.desc, 2001.asc, parentSector.asc, etc.
+4. orderBy: Sorting for dummies! Just add the field you want to order followed by a dot and the method for sorting ('asc' and 'des') and voilà! Example: country.des, 2001.asc, parentSector.asc, etc.
 5. yearAmount: Do you want to find which years have specific amounts of emmissions? Or those with more than a specific amount? You can do it now following this pattern: year,method,amount. However, just a couple of notes because regex are hard: the amount needs to include the decimal numbers even if it is just 0 otherwise it will fail spectacularly. Examples: 1945,gte,12.0  1991,lt,0.52 2011,eq,132.0
 6. searchTerm: Do you want to search for a record but can only remember some letters in any of the strings? Don't worry with searchTerm we got you covered. This query param will try to find any match in any of the string-based fields in the schema (country, sector and parentSector) so for example a query with "ind" will look either for the country India as for Industrial in any of the other fields.
 
