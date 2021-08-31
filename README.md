@@ -23,7 +23,7 @@ The endpoint has validation for the headers in the CSV file, so it must follow w
 
 ### Getting-App
 Using Postman just do a GET request to http:/localhost:8100/
- ![Posting app info](https://github.com/rubander/csv-importer/blob/02e09f7343e0c30f30b5dbbe3f55f3271266b2b2/assets/images/getting-app-query-example.PNG)
+ ![Getting app info](https://github.com/rubander/csv-importer/blob/ff9b91d12ed8f848dc67187118b305d6ead0069c/assets/images/getting-app-query-example.PNG)
 
 And experiment with filters! You can see everything that can be used in the Postman screenshot above but just in case here is a list and how to use them:
 
