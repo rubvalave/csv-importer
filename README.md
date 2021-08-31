@@ -16,7 +16,7 @@ After setting up the dockers you will find two apps in ports 8000 and 8100 of yo
 ### Posting-App
 
 Using Postman just do a POST request to http/localhost:8000/create-from-csv
- ![Posting app info](./assets/images/posting-app-upload-example.png)
+ ![Posting app info](https://github.com/rubander/csv-importer/blob/02e09f7343e0c30f30b5dbbe3f55f3271266b2b2/assets/images/posting-app-upload-example.PNG)
 
 Use the "emmissions.csv" file from sample-files folder and choose form-data and a "file" name for the field when doing the POST request.
 
