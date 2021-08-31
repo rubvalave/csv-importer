@@ -1,7 +1,7 @@
 {
-  "name": "vizz-importer",
+  "name": "csv-importer",
   "version": "1.0.0",
-  "description": "Importer app for Vizzuality technical interview",
+  "description": "CSV-importer-app",
   "scripts": {
     "start": "node ./bin/www",
     "infra:up": "docker-compose up -d",
