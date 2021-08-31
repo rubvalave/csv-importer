@@ -6,11 +6,14 @@ Small CSV importer app.
 Basic requirements:
 Node version required for tests: 12+
 Postman
+Docker 3+
 
-Just ***npm install*** every dependency and run ***npm run infra:up*** to create your own dockerized apps.
+1. Git clone this repo
+2. ***npm install***
+3. ***npm run infra:up***
 
 ## How to use
-After setting up the dockers you will find two apps in ports 8000 and 8100 of your local host that will be posting-app and getting-app respectively.
+After setting up Docker you will find two apps in ports 8000 and 8100 of your local host that will be posting-app and getting-app respectively.
 
 ### Posting-App
 Using Postman just do a POST request to http/localhost:8000/create-from-csv
