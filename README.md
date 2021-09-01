@@ -16,7 +16,7 @@ Docker 3+
 After setting up Docker you will find two apps in ports 8000 and 8100 of your local host that will be posting-app and getting-app respectively.
 
 ### Posting-App
-Using Postman just do a POST request to http/localhost:8000/create-from-csv
+Using Postman just do a POST request to http://localhost:8000/create-from-csv
  ![Posting app info](https://github.com/rubander/csv-importer/blob/02e09f7343e0c30f30b5dbbe3f55f3271266b2b2/assets/images/posting-app-upload-example.PNG)
 
 Use the "emmissions.csv" or "bigemmissions.csv" files from sample-files folder and choose form-data and a "file" name for the field when doing the POST request.
@@ -25,7 +25,7 @@ The endpoint has validation for the headers in the CSV file, so it must follow w
 
 
 ### Getting-App
-Using Postman just do a GET request to http:/localhost:8100/
+Using Postman just do a GET request to http://localhost:8100/
  ![Getting app info](https://github.com/rubander/csv-importer/blob/ff9b91d12ed8f848dc67187118b305d6ead0069c/assets/images/getting-app-query-example.PNG)
 
 And experiment with filters! You can see everything that can be used in the Postman screenshot above but just in case here is a list and how to use them:
