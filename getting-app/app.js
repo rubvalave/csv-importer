@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const logger = require("morgan");
+const helmet = require("helmet");
 const router = require("./routes/index");
 
 mongoose.connect('mongodb://mongo:27017/vizz-importer', {useNewUrlParser: true, useUnifiedTopology:true})
@@ -15,6 +16,7 @@ mongoose.connect('mongodb://mongo:27017/vizz-importer', {useNewUrlParser: true, 
 
 const app = express();
 
+app.use(helmet());
 app.use(logger("dev"));
 app.use(express.urlencoded({extended: true}));
 app.use(express.json())
